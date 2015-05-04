@@ -1,6 +1,6 @@
 # Nim binary size from 160 KB to 150 Bytes
 
-## [Accompanying blog article](http://hookrace.net/blog/binary-size-nim/)
+## [Accompanying blog article](http://hookrace.net/blog/nim-binary-size/)
 
 Uses the [nim-syscall](https://github.com/def-/nim-syscall) library.
 
