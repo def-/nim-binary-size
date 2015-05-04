@@ -35,10 +35,10 @@ phdr:
     dq  filesize     ; p_memsz
     dq  0x1000       ; p_align
 
-phdrsize equ  $ - phdr
+phdrsize  equ  $ - phdr
 
 incbin "payload.bin"
 
-filesize equ $ - ehdr
+filesize  equ  $ - ehdr
 
 ; vim: ft=tasm
