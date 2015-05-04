@@ -61,3 +61,6 @@ custom_elf hello3
 
 # hello4.nim
 custom_elf hello4
+
+# hello5.nim
+custom_elf hello5

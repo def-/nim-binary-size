@@ -26,8 +26,9 @@ Results from the article, on Linux x86-64 with GCC 5.1 and Clang 3.6.0:
     == Custom Linking ==
     hello3_custom           158
     hello4_custom           150
+    hello5_custom           149
 
-    $ objdump -rd nimcache/hello4.o
+    $ objdump -rd nimcache/hello5.o
     ...
     0000000000000000 <_start>:
      0: b8 01 00 00 00          mov    $0x1,%eax
@@ -38,7 +39,6 @@ Results from the article, on Linux x86-64 with GCC 5.1 and Clang 3.6.0:
     14: 31 ff                   xor    %edi,%edi
     16: b8 3c 00 00 00          mov    $0x3c,%eax
     1b: 0f 05                   syscall 
-    1d: c3                      retq 
     ...
 
     $ ./run.sh --cc:clang
@@ -57,6 +57,7 @@ Results from the article, on Linux x86-64 with GCC 5.1 and Clang 3.6.0:
     == Custom Linking ==
     hello3_custom           160
     hello4_custom           152
+    hello5_custom           151
 
 ## x86
 
@@ -78,6 +79,7 @@ Works on 32bit x86 now, also with GCC 5.1 and Clang 3.6.0:
     == Custom Linking ==
     hello3_custom           127
     hello4_custom           119
+    hello5_custom           116
 
     $ ./run32.sh --cc:clang
     == Using the C Standard Library ==
@@ -95,8 +97,9 @@ Works on 32bit x86 now, also with GCC 5.1 and Clang 3.6.0:
     == Custom Linking ==
     hello3_custom           126
     hello4_custom           118
+    hello5_custom           116
 
-    $ ./objdump -rd nimcache/hello4.o
+    $ objdump -rd nimcache/hello5.o
     ...
     00000000 <_start>:
        0:	53                   	push   %ebx
@@ -108,6 +111,4 @@ Works on 32bit x86 now, also with GCC 5.1 and Clang 3.6.0:
       17:	b8 01 00 00 00       	mov    $0x1,%eax
       1c:	31 db                	xor    %ebx,%ebx
       1e:	cd 80                	int    $0x80
-      20:	5b                   	pop    %ebx
-      21:	c3                   	ret    
     ...
