@@ -2,6 +2,8 @@
 
 ## [Accompanying blog article](http://hookrace.net/blog/binary-size-nim/)
 
+Uses the [nim-syscall](https://github.com/def-/nim-syscall) library.
+
 All on Linux x86-64 with GCC 5.1 and Clang 3.6.0:
 
     $ nimble install syscall
