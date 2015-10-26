@@ -9,5 +9,5 @@ proc exit(n: clong): clong {.inline, discardable.} =
   syscall(EXIT, n)
 
 proc main {.exportc: "_start".} =
-  write STDOUT, "Hello!\n", 7
+  write STDOUT, cast[cstring](0x00400008), 7
   exit 0

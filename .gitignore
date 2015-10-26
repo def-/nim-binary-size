@@ -1,9 +1,5 @@
-*
-!*/
-!*.*
 nimcache/
-*.swp
-*.c
-*.bin
 *.o
 *.a
+hello*
+!hello*.nim
